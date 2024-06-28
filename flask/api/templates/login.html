@@ -1,12 +1,60 @@
-n = 5
-x = []
-import random
-for i in range(n):
-    x.append(random.randint(1,323))
-print("排序前数据：",x)
-for i in range(n-1):
-    for j in range(n-1-i):
-        if x[j]>x[j+1]:
-            x[j],x[j+1]= x[j+1],x[j]
-    print("当前第{}轮，排序后的顺序为：{}".format(i+1,x))
-print("排序后的顺序：",x)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>分流抢票 - 用户登录</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        .login-container {
+            width: 300px;
+            margin: 100px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .error {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>分流抢票 - 用户登录</h2>
+        <form method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            {% if error %}
+            <p class="error">{{ error }}</p>
+            {% endif %}
+            <button type="submit">登录</button>
+        </form>
+    </div>
+</body>
+</html>
