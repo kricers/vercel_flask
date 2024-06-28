@@ -1,12 +1,15 @@
-n = 5
-x = []
-import random
-for i in range(n):
-    x.append(random.randint(1,323))
-print("排序前数据：",x)
-for i in range(n-1):
-    for j in range(n-1-i):
-        if x[j]>x[j+1]:
-            x[j],x[j+1]= x[j+1],x[j]
-    print("当前第{}轮，排序后的顺序为：{}".format(i+1,x))
-print("排序后的顺序：",x)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>分流抢票 - 抢票页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        .ticket-container {
+            width: 500px;
+            margin: 100px auto;
+            background-color: white;
+            padding:
